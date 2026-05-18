@@ -1,17 +1,97 @@
 ---
+const pageTitle = "Alan R. Izarraras Gómez";
+const tagline = "Scientist • Writer • Creative";
 
+// Get latest blog posts
+import { getCollection } from 'astro:content';
+const posts = await getCollection('blog');
+const latestPosts = posts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{pageTitle}</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: rgb(246, 239, 212);
+      color: rgb(2, 2, 2);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 5rem 2rem;
+      background: #E0F4FF;
+      flex-wrap: wrap;
+    }
+
+    .title-group { text-align: left; }
+    h1 { font-size: 4rem; margin: 0; }
+    .tagline { font-size: 1.5rem; opacity: 0.9; margin: 0.3rem 0 0 0; }
+
+    .logo {
+      width: 193px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    main { max-width: 900px; margin: 4rem auto; padding: 0 2rem; }
+
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .post-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .post-card h3 { margin: 0 0 0.8rem 0; }
+    .post-card p { margin: 0 0 1rem 0; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="title-group">
+      <h1>{pageTitle}</h1>
+      <p class="tagline">{tagline}</p>
+    </div>
+    <img src="/images/logo_colorful.png" alt="A. Izarraras" class="logo" />
+  </header>
+
+  <main>
+    <h2>Latest Blog Posts</h2>
+
+    <div class="post-grid">
+      {latestPosts.map(post => (
+        <div class="post-card">
+          <h3><a href={`/blog/${post.id}`}>{post.data.title}</a></h3>
+          <p>{post.data.description}</p>
+          <small>{new Date(post.data.date).toLocaleDateString('es-ES')}</small>
+        </div>
+      ))}
+    </div>
+
+    {latestPosts.length === 0 && <p>No posts yet. Create your first .md file in src/content/blog/</p>}
+  </main>
+</body>
 </html>
