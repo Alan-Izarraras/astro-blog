@@ -4,7 +4,7 @@ import { getCollection, getEntry, render } from 'astro:content';
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map(post => ({
-    params: { id: post.id }
+    params: { id: post.id }   // This will be "eng/biology_compute"
   }));
 }
 
@@ -15,7 +15,7 @@ if (!post) {
   return Astro.redirect('/404');
 }
 
-const { Content } = await render(post);   // ← This is the correct way now
+const { Content } = await render(post);
 ---
 
 <html lang="es">
@@ -48,9 +48,9 @@ const { Content } = await render(post);   // ← This is the correct way now
   
   <article>
     <h1>{post.data.title}</h1>
-    <p><small>{new Date(post.data.date).toLocaleDateString('es-ES')}</small></p>
+    <p><small>{post.data.date}</small></p>   <!-- We'll format it nicely later -->
     
-    <Content />   <!-- This renders the Markdown -->
+    <Content />
   </article>
 </body>
 </html>

@@ -1,0 +1,43 @@
+---
+title: "The curious gene"
+date: "01-10-2024"        # ← DD-MM-YYYY
+description: "Life as a learning algorithm"
+---
+
+In the selfish gene, Richard Dawkins describes a straightforward way of understanding the operational properties of life. He imagines that genetic material has this hard coded "motivation" for survival and persisting in time. This is a brilliant remark because it offers intuitive understanding of what life is and what it wants to achieve, and largely explains that natural selection favors genetic variants that make carriers more likely to reproduce and thus be represented in the next generation. A very neatly packaged rule that can be dissected into so much biological and evolutionary intuition. Nevertheless, this overlooks an important property; that life is novelty and technology generating. This is essentially what Erwin Schrödinger referred to as negentropy.
+
+The arrow of time seems to be accompanied by a constant infiltration of complexity, which grants biological agents the capacity to generate novelty and technology. It is almost like a generalized Moore's law in the realm of chemistry and biology, where over the evolutionary timescale, innovations seem to be constant, common place and follow a pattern (for more on this visit Jumping Continuity Theory by Daniel Varga @DanielVarga_P). Additionally, we humans dream and theorize about higher ultra-developed life-forms, particularly ones that broadly understand and manipulate reality. When we ponder about life outside planet earth, we envision these mighty god-like ultra-intelligent civilizations that have mastered physics.
+
+These are reasons why I think obligate replication and persisting in time are necessary steps, but certainly not the end goal of evolution. I have now come to understand biology as the expression of a branching algorithm that seeks to understand the substrate it is growing on. From the first organism that harbored genetic material, to bacteria, to plants, to mammals, to us; all biodiversity on earth is as a singular being, a life force that is tasked with exploring and recognizing the substrate it is growing on by means of novelty generation and technological development.
+
+"Evolution is a measurement performed by the genome on the environment"
+
+"https://www.evogeneao.com/en
+"tree-of-life.png" 
+
+The tree of life 
+
+
+I am not constrained by the idea that life is substrate obligate. That is to say that life must necessarily possess nucleic acids or any specific kind of material scaffolding, but for the purpose of sticking with verifiable knowledge about the life we do know, I will introduce and derive this from the molecular evolutionary properties of DNA and life forms on our planet.
+
+In the modern view of the origins of life, there had to be a singular genetic material. Likely an RNA molecule with the capacity of self replication that later derived the technology of becoming double-stranded and encapsulated, which offered greatly enhanced durability and information containment. From flawed self replication mechanisms and the overall harshness of reality, alternative forms of the same molecular information arose by mutation. Alongside self replication and generational mutation came the technology of recombination, which allowed to adopt distinct molecular information that was not available from a current evolutionary lineage. Given enough time, this first RNA molecule went on to be expressed in different versions of itself. The version of it that mutated at site l followed a different trajectory than the version of it that changed at site l + 1. And thus, from an original being that harvested a primitive form of genetic material, sprung all the tree of life as we know it. Another important and fundamental ingredient is the environment. The roll of the statistical dice of genetics progressed through a difficult surface. Molecular information found its way and prospered. It encountered absurd challenges and every time, it came up with a solution. The key was in novelty generation unlocked by high copy numbers, something the field of evolution calls, genetic diversity. There were many breakthroughs: becoming a cell, movement, vision, self-defense systems, robust replication, proteins, resource management, energy economics, modularization, multicellularity, and so many more. I just want you to recognize for a moment the monumental task of coming up with these solutions. It is something that cannot be imagined, but is largely explained by the mechanisms of natural selection. So many unprovable solutions to complex problems pushed by ungodly amounts of time and a sufficiently large number of trial and error experiments.
+
+Every life form, the physical location that they inhabit and the competition that they face is subjected to a unique arena with unique challenges to overcome. Surviving in this world is no joke, nothing is as raw, astonishing and humbling as what planet earth had and has to offer.
+
+So if life has consistently found a way to face all these complex problems by inventing new technologies... what is it really doing? Does this count as it having a direction?
+
+"Evolution is a measurement performed by the genome on the environment"
+
+Let's go back to the original proposed life form Luca, the source of all this journey we happen to be spearheading. I want you to, in your mind, right now, observe Luca and hit the fast-forward button on the time dimension. Make millions of years go by in fractions of a second and imagine the constant splitting of lineages, all the branching in information and the movement in space. If you are successful in this experiment (in the way I want you to be) you would realize that life is akin to a branching algorithm tasked with understanding its substrate. We can equate this extremely zoomed out version of life to a reconnaissance operation that’s trying to figure out every minute detail of being. Ever since Luca, molecular lineages have been deployed in tandem and in parallel to recollect as much information about “living” as possible.
+
+If you are willing to grant beingness and livelihood to the totality of this algorithm, you can imagine an intrinsic hard-coded curiosity. It is a search optimization with the sole goal of mastering earth. That is the goal. To spread, to try new things and prompt reality (the environment) via technological development. Every new solution and technological milestone is essentially surveying reality with: What am I? What are you? What is going on? Novel solutions to problems derive new understanding of the world we live in.
+
+Thus, the whole tree of life can be seen as the same individual, divided in billions of branches. It is the same life force, the same origin.
+
+We humans are no exception and also a part of this learning strategy, and so far we have made significant progress towards learning about our substrate. Actually, we are at a breakthrough branch where copy number has been relegated to a secondary role. We instead seem to care a lot more about understanding. How peculiar that this is the case. How peculiar that when survival is solved, the next best thing we can do is recognize and find out what we are by pursuing technologies that inform us about ourselves. Recognize, too, that this is at extremely low odds, nevertheless we have done it. The original plan has succeeded. Luca has succeeded, planet earth succeeded. We are here. We have arrived. And we are making progress faster than ever. It only took an unimaginable amount of time for a single species to achieve the milestone where copy number becomes secondary. 1 / n_biodiversity chance, 1 in billions. So let it be known. Our genes are not selfish, information isn't simply looking to propagate itself; it is instead deeply curious and yearns to know what is going on.
+
+If we are a result of life, which we have learned is actually an evolutionary algorithm to make sense of reality... and we happened to happen at planet earth. Then, are there other learning algorithms deployed in other planets? Were these more efficient than ours? Are they also in a state where they have solved survival and are now looking inwards and outwards? When we step outside our orb... who will we encounter? Is this survival 2.0? Will this journey also last millions of years? And what happens then? What happens when we duke it out with fellow galactic species and arrive at new understanding through the riding of the technological arrow of time? Are we god then? Is that what it means to be alive?</p>
+
+"Wanderer.jpeg" "Caspar David Friedrich"
+Wanderer above the sea fog by Caspar David Friedrich
+
