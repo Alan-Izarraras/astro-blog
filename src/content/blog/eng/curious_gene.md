@@ -10,13 +10,17 @@ The arrow of time seems to be accompanied by a constant infiltration of complexi
 
 These are reasons why I think obligate replication and persisting in time are necessary steps, but certainly not the end goal of evolution. I have now come to understand biology as the expression of a branching algorithm that seeks to understand the substrate it is growing on. From the first organism that harbored genetic material, to bacteria, to plants, to mammals, to us; all biodiversity on earth is as a singular being, a life force that is tasked with exploring and recognizing the substrate it is growing on by means of novelty generation and technological development.
 
-"Evolution is a measurement performed by the genome on the environment"
+<h3 style="text-align: center;">Evolution is a measurement performed by the genome on the environment</h3>
 
-"https://www.evogeneao.com/en
-"tree-of-life.png" 
-
-The tree of life 
-
+<div style="text-align: center; margin: 3rem 0;">
+  <a href="https://www.evogeneao.com/en" target="_blank" rel="noopener">
+    <img 
+      src="/images/tree-of-life.png" 
+      alt="The tree of life" 
+      style="width: 1000px; max-width: 100%; height: auto; border-radius: 12px;">
+  </a>
+  <p><em>The tree of life</em></p>
+</div>
 
 I am not constrained by the idea that life is substrate obligate. That is to say that life must necessarily possess nucleic acids or any specific kind of material scaffolding, but for the purpose of sticking with verifiable knowledge about the life we do know, I will introduce and derive this from the molecular evolutionary properties of DNA and life forms on our planet.
 
@@ -25,8 +29,6 @@ In the modern view of the origins of life, there had to be a singular genetic ma
 Every life form, the physical location that they inhabit and the competition that they face is subjected to a unique arena with unique challenges to overcome. Surviving in this world is no joke, nothing is as raw, astonishing and humbling as what planet earth had and has to offer.
 
 So if life has consistently found a way to face all these complex problems by inventing new technologies... what is it really doing? Does this count as it having a direction?
-
-"Evolution is a measurement performed by the genome on the environment"
 
 Let's go back to the original proposed life form Luca, the source of all this journey we happen to be spearheading. I want you to, in your mind, right now, observe Luca and hit the fast-forward button on the time dimension. Make millions of years go by in fractions of a second and imagine the constant splitting of lineages, all the branching in information and the movement in space. If you are successful in this experiment (in the way I want you to be) you would realize that life is akin to a branching algorithm tasked with understanding its substrate. We can equate this extremely zoomed out version of life to a reconnaissance operation that’s trying to figure out every minute detail of being. Ever since Luca, molecular lineages have been deployed in tandem and in parallel to recollect as much information about “living” as possible.
 
@@ -38,6 +40,12 @@ We humans are no exception and also a part of this learning strategy, and so far
 
 If we are a result of life, which we have learned is actually an evolutionary algorithm to make sense of reality... and we happened to happen at planet earth. Then, are there other learning algorithms deployed in other planets? Were these more efficient than ours? Are they also in a state where they have solved survival and are now looking inwards and outwards? When we step outside our orb... who will we encounter? Is this survival 2.0? Will this journey also last millions of years? And what happens then? What happens when we duke it out with fellow galactic species and arrive at new understanding through the riding of the technological arrow of time? Are we god then? Is that what it means to be alive?</p>
 
-"Wanderer.jpeg" "Caspar David Friedrich"
-Wanderer above the sea fog by Caspar David Friedrich
+<div style="text-align: center; margin: 3rem 0;">
+  <img 
+    src="/images/Wanderer.jpeg" 
+    alt="Wanderer" 
+    style="width: 1000px; max-width: 100%; height: auto; border-radius: 12px;">
+  <p><em>Wanderer above the sea fog by Caspar David Friedrich</em></p>
+</div>
+
 

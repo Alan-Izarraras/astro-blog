@@ -1,6 +1,6 @@
 ---
 title: "An imagination of true-randomness"
-date: "00-00-0000"        # ← DD-MM-YYYY
+date: "2024"        # ← DD-MM-YYYY
 description: "How I would implement true-randomness"
 ---
 
@@ -12,5 +12,10 @@ In this sense, a truly random system would be one which generates outcomes from 
 
 We peculiarly say that these last ones are deterministic systems: but maybe their formulas have been mistaken for knowledge, when they are actually formulas for observation (?). Random variable inference seems like predicting the future, but it's actually a prediction done in the past that is stable in time. Prediction of the future is inaccessible to us and is the reason why chaotic systems, cellular automatas and digits of Pi cannot be known before observing them.
 
-caja_rara_2.png
-
+<div style="text-align: center; margin: 3rem 0;">
+  <img 
+    src="/images/caja_rara_2.png" 
+    alt="box" 
+    style="width: 1000px; max-width: 100%; height: auto; border-radius: 12px;">
+  <p><em></em></p>
+</div>

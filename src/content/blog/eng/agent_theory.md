@@ -4,18 +4,21 @@ date: "03-09-2024"        # ← DD-MM-YYYY
 description: "My theory of experience and agents"
 ---
 
-Overview
+<h2 style="text-align: center;">Overview</h2>
 
 Reality is made out of experience (there is <i><b>information</b></i> to be interpreted) and a first agent able to observe this experience. Experience and agents are likely the same thing (like some RNA type thing, which has the dual property of being software and hardware simultaneously).
 
 In the first step, there is experience and there is an agent that gets to have an experience. This agent has a special move called observation. When an agent observes, it is essentially differentiating a slice of experience, which results in new objects. Objects are themselves agents (they get to experience) but are simultaneously something new to be experienced. This new agent (any agent) also has the special move observe and so is also capable of creating new objects/experiences.</p>
 
-https://x.com/danallison"
-thinking-infinity-400.png
+<div style="text-align: center; margin: 3rem 0;">
 
-Thinking about infinity by Dan Allison 
+[![Thinking about infinity by Dan Allison](/images/thinking-infinity-400.png)](https://danallison.info/)
 
-Description
+[Thinking about infinity by Dan Allison]
+
+</div>
+
+<h2 style="text-align: center;">Description</h2>
 
 This is a minimal model that imagines a universe where the act of <i><b>observation</b></i> is the main mechanism behind generating novelty and new information. I must say and perhaps warn you that this borrows from a panpsychist view of reality in that it assumes that there is an original observer and an original experience (original as in singular and first of its kind). I am also using the word <i><b>information</b></i> loosely to describe phenomena that can be experienced and configured in distinct ways.
 
@@ -37,6 +40,13 @@ Observations are strictly n of 1 events. An agent can observe the whole experien
 
 This is like a matryoshka, an onion, or a self embedded Torus of minds. 
 
-Ekathea.jfif
+<div style="text-align: center; margin: 3rem 0;">
+
+![Ekathea by Konstantin Dimov](/images/Ekathea.jfif)
+
 Image shown is "Ekathea" by artist Konstantin Dimov
+
+</div>
+
+
 

@@ -2,12 +2,13 @@
 const pageTitle = "Alan R. Izarraras Gómez";
 const tagline = "Scientist • Writer • Creative";
 
-// Get latest blog posts
 import { getCollection } from 'astro:content';
-const posts = await getCollection('blog');
-const latestPosts = posts
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 4);
+const allPosts = await getCollection('blog');
+
+// Sort by date (newest first)
+const sortedPosts = allPosts.sort((a, b) => 
+  new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
 ---
 
 <html lang="es">
@@ -79,19 +80,27 @@ const latestPosts = posts
   </header>
 
   <main>
-    <h2>Latest Blog Posts</h2>
+    <h2>Blog Posts</h2>
 
     <div class="post-grid">
-      {latestPosts.map(post => (
-        <div class="post-card">
-          <h3><a href={`/blog/${post.id}`}>{post.data.title}</a></h3>
-          <p>{post.data.description}</p>
-          <small>{new Date(post.data.date).toLocaleDateString('es-ES')}</small>
-        </div>
+      {sortedPosts.map((post) => (
+        <a href={`/blog/${post.id}`} class="post-card">
+          {post.data.image && (
+            <img src={post.data.image} alt={post.data.title} class="post-image" />
+          )}
+          <div class="post-content">
+            <h3>{post.data.title}</h3>
+            <p>{post.data.description}</p>
+            <small>
+              {post.data.date} 
+              {post.body && ` • ${Math.ceil(post.body.length / 800)} min read`}
+            </small>
+          </div>
+        </a>
       ))}
     </div>
 
-    {latestPosts.length === 0 && <p>No posts yet. Create your first .md file in src/content/blog/</p>}
+    {sortedPosts.length === 0 && <p>No blog posts yet. Create some in src/content/blog/</p>}
   </main>
 </body>
 </html>

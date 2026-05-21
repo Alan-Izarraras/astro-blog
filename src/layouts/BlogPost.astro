@@ -1,0 +1,67 @@
+---
+import { render } from 'astro:content';
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{post.data.title} | Alan R. Izarraras Gómez</title>
+  
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: rgb(246, 239, 212);
+      color: rgb(2, 2, 2);
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    article { text-align: justify; }
+    img { 
+      max-width: 100%; 
+      height: auto; 
+      border-radius: 12px; 
+      margin: 25px 0; 
+    }
+
+    .logo-header, .logo-footer {
+      text-align: center;
+      margin: 0.1rem 0 0.1rem 0;
+    }
+    .logo-header img, .logo-footer img {
+      width: 193px;
+      height: auto;
+      border-radius: 50%;
+      opacity: 0.65;
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo at the START (now clickable) -->
+    <div class="logo-header">
+      <a href="/">
+        <img src="/images/logo_colorful.png" alt="Alan R. Izarraras Gómez" />
+      </a>
+    </div>
+
+    <article>
+      <h1>{post.data.title}</h1>
+      <p><small>{post.data.date}</small></p>
+    
+      <Content />
+    </article>
+
+    <!-- Logo at the END (also clickable) -->
+    <div class="logo-footer">
+      <a href="/">
+        <img src="/images/logo_colorful.png" alt="Alan R. Izarraras Gómez" />
+      </a>
+      <p style="margin-top: 0.1rem; opacity: 0.8;">Alan R. Izarraras Gómez</p>
+    </div>
+</body>
+</html>

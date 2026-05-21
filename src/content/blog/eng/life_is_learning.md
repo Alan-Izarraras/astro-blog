@@ -26,5 +26,10 @@ And this begs the question.
 
 If we are a result of life, which we have learned is actually an evolutionary algorithm to make sense of reality... and we happened to happen at planet earth. Then, are there other learning algorithms deployed in other planets? where these more efficient than ours? Are they also in a state where they have solved survival and are now looking towards the stars? When we step outside of our orb... who will we encounter? Is this survival 2.0? Will this undertaking also last millions of years? And what happens then? what happens when we duke it out with fellow galactic species and arrive at new understanding. Are we god then? Is that what it means to be alive? 
 
-i_am_meme.png
-
+<div style="text-align: center; margin: 3rem 0;">
+  <img 
+    src="/images/i_am_meme.png" 
+    alt="I" 
+    style="width: 1000px; max-width: 100%; height: auto; border-radius: 12px;">
+  <p><em></em></p>
+</div>

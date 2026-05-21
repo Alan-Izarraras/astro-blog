@@ -10,7 +10,15 @@ In order to lay out how AI systems can spring to life, let me first demystify, a
 
 If you are able to zoom out on the history of life on the planet and envision its trajectory starting from the first-ever proposed living being, luca , to us at this very moment, this will help you visualize what I'm trying to describe. So in a way, the trajectory of living systems points towards understanding through technological development (let's call this agentic fitness). It is all about how much information an organism has gathered about the substrate it is living in.
 
-  					<img src="luca_branching.png" alt="luca branching">
+<div style="text-align: center; margin: 3rem 0;">
+  <img 
+    src="/images/luca_branching.png" 
+    alt="The last universal common ancestor" 
+    style="width: 1000px; max-width: 100%; height: auto; border-radius: 12px;">
+	Last Universal Common Ancestor
+  <p><em></em></p>
+</div>
+
 
 Two other concepts that are central to biology are natural selection and the environment. Let's break these down too. Selection can be viewed as the overarching principle by which matter ascertains itself throughout time. In a way, you can view it as the combination of all known and unknown laws of physics that make the outcomes of this universe possible. But another way to view it is to say that selection is simply the manifest will or doing of the next biggest organism or agent. 
 
@@ -18,8 +26,15 @@ To give an analogy, imagine video games. In a game, things happen to characters 
 
 The relevant point here is that the being we inhabit provides our <i>environment</i> and with it, a bunch of selective pressures. And so the environment and its selective pressures, are actually “the will of the overarching life form we are a part of” and are equal to invoking <i>natural selection</i>. You can imagine a sequence of encompassing beings one within another, which molded us into what we are. So, in short: Selection is the will/design of the beings we are a part of, just like how our cells are experiencing selective pressures from our decisions. And the environment is simply the physical limits of this higher-order being from which the selective pressures are made manifest, as an area of effect.
 
-"https://raminnazer.com/"
-"you_another_me.png" "Ramin Nazer"
+
+<div style="text-align: center; margin: 3rem 0;">
+  <img 
+    src="/images/you_another_me.png" 
+    alt="Ramin Nazer" 
+    style="width: 1000px; max-width: 100%; height: auto; border-radius: 12px;">
+	by Ramin Nazer (https://raminnazer.com/)
+  <p><em></em></p>
+</div>
 
 If you are still with me, we now have formed a picture which diminishes <i>randomness</i>, the evolutionary pressures, and the environment; to the consequences of the free will of the highest-order being we are a part of.
 
@@ -29,7 +44,13 @@ So now let's tell this story. In <i>20XX</i> humanity continues to develop AI. W
 
 The first versions of this require human assistance at a few of the stages, however it inevitably breaks that barrier and in 20XX we hit the critical point in which these machines are completely independent of us (let's just catalog them as machines, but their substrate may very well be of a wide variety of molecular architectures). At this stage, the cat is out of the bag. We humans will have effectively created a new species from scratch. Machines will quickly start speciating into all sorts of forms and utilities. The Transformers media franchise comes to mind.
 
-<img src="Trasnformers_uni.jpg" alt="Transformers">
+<div style="text-align: center; margin: 3rem 0;">
+  <img 
+    src="/images/Trasnformers_uni.jpg" 
+    alt="Transformers" 
+    style="width: 1000px; max-width: 100%; height: auto; border-radius: 12px;">
+  <p><em></em></p>
+</div>
 
 But be not afraid! 
 

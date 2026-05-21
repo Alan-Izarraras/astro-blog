@@ -25,15 +25,22 @@ In a sense, evolution is sampling the state space of genomic configurations avai
 The agentic landscape of life largely explains why higher order organisms do not reproduce as much as lower order organisms. In the biological story of evolution, there comes a critical point where simple offspring maximization is no longer an effective strategy for producing better and more efficient learning. Instead, we can invoke the complexity of an organismal phenotype to explain the rate and kind of learning that is taking place for that specific genetic lineage. We humans do not go around making as many babies as we possibly can because the evolutionary process has brought us to a state where that strategy is no longer required to increase our odds of survival as a species. We are far better off learning about our environment, about the world around us and about physics in order to assure that humanity continues thriving for many years to come. In this learning-centric view, reproduction is one of many crucial technologies that life found in order to persist in time because the process of death and birth is a great implementation of a general purpose learning algorithm; but it is no longer the ultimate goal.
 
 With this new ordering principle, we can draw a hierarchy of agency that correlates with: a) survival potential across increasingly difficult environmental challenges, b) Rate of learning and technological discovery and c) Dimensional complexity of phenotypes. I propose that life can be classified across a hierarchy of phenotypic dimensions that act as an ordering paradigm for the rate of learning and technological discovery.
+		
+<div style="text-align: center; margin: 3rem 0;">
+  <img 
+    src="/images/phenotypic_space_dimensionality.png" 
+    alt="Phenotypic space dimensionality" 
+    style="width: 1000px; max-width: 100%; height: auto;">
+  <p><em>A possible taxonomy of phenotypic space dimensions</em></p>
+</div>
 
-				
-"phenotypic_space_dimensionality.png"
-A possible taxonomy of phenotypic space dimensions 
-
-"the_fitness_hierarchy.png"
-A hierarchy of organismal complexity 
-
-					
+<div style="text-align: center; margin: 3rem 0;">
+  <img 
+    src="/images/the_fitness_hierarchy.png" 
+    alt="Organismal complexity" 
+    style="width: 1000px; max-width: 100%; height: auto;">
+  <p><em>A hierarchy of organismal complexity</em></p>
+</div>
 
 Among other things, this learning-centric vision of evolution offers new explanations, perspectives and considerations to the following: 
 1) Where are the pure replicators?
@@ -57,7 +64,8 @@ Among other things, this learning-centric vision of evolution offers new explana
 10) Explains that genome to phenotype mappings are difficult because they neglect the various phenotypic dimensions. 
 
 Finally, I would like to give credit to (Lourenço, Glémin, and Galtier 2013) for introducing and testing key ideas about the role of environment and organismal complexity so succinctly. Although I had already come to realize the incompatibility of the fitness definition prior to having encountered their research; upon reading, it inspired and motivated a new set of arguments and considerations. 
+
 “The rate of environmental change and, interestingly, the dimensionality of phenotypic space (organismal complexity) affect the adaptive rate more deeply than does the effective population size.” 
 
-"https://academic.oup.com/mbe/article/30/6/1292/1133904" > Lourenço, João M., Sylvain Glémin, and Nicolas Galtier. 2013. “The Rate of Molecular Adaptation in a Changing Environment.” Molecular Biology and Evolution 30 (6): 1292–1301.
+https://academic.oup.com/mbe/article/30/6/1292/1133904 > Lourenço, João M., Sylvain Glémin, and Nicolas Galtier. 2013. “The Rate of Molecular Adaptation in a Changing Environment.” Molecular Biology and Evolution 30 (6): 1292–1301.
 

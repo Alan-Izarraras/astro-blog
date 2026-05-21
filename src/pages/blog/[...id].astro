@@ -1,56 +1,18 @@
 ---
-import { getCollection, getEntry, render } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map(post => ({
-    params: { id: post.id }   // This will be "eng/biology_compute"
+    params: { id: post.id }
   }));
 }
 
 const { id } = Astro.params;
 const post = await getEntry('blog', id);
 
-if (!post) {
-  return Astro.redirect('/404');
-}
-
-const { Content } = await render(post);
+if (!post) return Astro.redirect('/404');
 ---
 
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{post.data.title} | Alan R. Izarraras Gómez</title>
-  
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: rgb(246, 239, 212);
-      color: rgb(2, 2, 2);
-      line-height: 1.7;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-    article { text-align: justify; }
-    img { 
-      max-width: 100%; 
-      height: auto; 
-      border-radius: 12px; 
-      margin: 25px 0; 
-    }
-  </style>
-</head>
-<body>
-  <a href="/">← Back to Home</a>
-  
-  <article>
-    <h1>{post.data.title}</h1>
-    <p><small>{post.data.date}</small></p>   <!-- We'll format it nicely later -->
-    
-    <Content />
-  </article>
-</body>
-</html>
+<BlogPost post={post} />
