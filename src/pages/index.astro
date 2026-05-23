@@ -21,54 +21,81 @@ const sortedPosts = allPosts.sort((a, b) =>
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: rgb(246, 239, 212);
-      color: rgb(2, 2, 2);
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+    .blog-list {
+      max-width: 800px;
+      margin: 2rem auto;
     }
 
-    header {
+    .post-item {
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid #dddddd;
+      padding-bottom: 0.8rem;
+    }
+
+    .post-item summary {
+      font-size: 1.25rem;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      list-style: none;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      padding: 5rem 2rem;
-      background: #E0F4FF;
-      flex-wrap: wrap;
+      user-select: none;
     }
 
-    .title-group { text-align: left; }
-    h1 { font-size: 4rem; margin: 0; }
-    .tagline { font-size: 1.5rem; opacity: 0.9; margin: 0.3rem 0 0 0; }
-
-    .logo {
-      width: 193px;
-      height: auto;
-      border-radius: 50%;
+    .post-item summary:hover {
+      color: #ccad00;
     }
 
-    main { max-width: 900px; margin: 4rem auto; padding: 0 2rem; }
-
-    .post-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+    .post-item .arrow {
+      font-size: 1.8rem;
+      transition: transform 0.4s ease;
+      transform-origin: center;
     }
 
-    .post-card {
-      background: white;
-      padding: 1.5rem;
+    .post-item[open] .arrow {
+      transform: rotate(90deg);
+    }
+
+    .description-link {
+      display: block;
+      color: #ccad00;
+      text-decoration: none;
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+
+    .description-link:hover {
+      text-decoration: underline;
+      color: #0055aa;
+    }
+
+    .post-item .post-content {
+      padding: 0 0 1.5rem 0;
+    }
+    
+    .post-image {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin-bottom: 0.5rem;
     }
 
-    .post-card h3 { margin: 0 0 0.8rem 0; }
-    .post-card p { margin: 0 0 1rem 0; font-size: 0.95rem; }
+    .read-more {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #0066cc;
+      font-weight: 500;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   </style>
+
 </head>
 <body>
   <header>
@@ -82,25 +109,25 @@ const sortedPosts = allPosts.sort((a, b) =>
   <main>
     <h2>Blog Posts</h2>
 
-    <div class="post-grid">
-      {sortedPosts.map((post) => (
-        <a href={`/blog/${post.id}`} class="post-card">
-          {post.data.image && (
-            <img src={post.data.image} alt={post.data.title} class="post-image" />
-          )}
+    <div class="blog-list">
+      {sortedPosts.map(post => (
+        <details class="post-item">
+          <summary>
+            <span class="title">{post.data.title}</span>
+            <span class="arrow">›</span>
+          </summary
+        
           <div class="post-content">
-            <h3>{post.data.title}</h3>
-            <p>{post.data.description}</p>
-            <small>
-              {post.data.date} 
-              {post.body && ` • ${Math.ceil(post.body.length / 800)} min read`}
-            </small>
+            {post.data.image && (
+              <img src={post.data.image} alt={post.data.title} class="post-image" />
+            )}
+            <a href={`/blog/${post.id}`} class="description-link">
+              {post.data.description}
+            </a>
           </div>
-        </a>
+        </details>
       ))}
     </div>
-
-    {sortedPosts.length === 0 && <p>No blog posts yet. Create some in src/content/blog/</p>}
   </main>
 </body>
 </html>

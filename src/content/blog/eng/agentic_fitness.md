@@ -2,6 +2,7 @@
 title: "The agentic interpretation of biological fitness"
 date: "23-04-2025"        # ← DD-MM-YYYY
 description: "Life & AI"
+image: "/images/the_fitness_hierarchy.png"
 ---
 
 Charles Darwin proposed reproduction and fecundity as the quantification of biological fitness, on the theoretical grounds that this allows an organism’s lineage to continue further in time. When considering which traits natural selection is influencing, maximizing trait fecundity is in alignment with this definition of fitness. Although this is a good approximation of what biology seems to be doing, I believe this to be a flawed interpretation of the evolutionary process. In this writing, I’ll attempt to describe a novel theory that positions the ability to learn and derive technologies at the heart of natural selection by re interpreting trait fitness. I call this the agentic view of fitness. 

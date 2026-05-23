@@ -2,6 +2,7 @@
 title: "The curious gene"
 date: "01-10-2024"        # ← DD-MM-YYYY
 description: "Life as a learning algorithm"
+image: "/images/Wanderer.jpeg"
 ---
 
 In the selfish gene, Richard Dawkins describes a straightforward way of understanding the operational properties of life. He imagines that genetic material has this hard coded "motivation" for survival and persisting in time. This is a brilliant remark because it offers intuitive understanding of what life is and what it wants to achieve, and largely explains that natural selection favors genetic variants that make carriers more likely to reproduce and thus be represented in the next generation. A very neatly packaged rule that can be dissected into so much biological and evolutionary intuition. Nevertheless, this overlooks an important property; that life is novelty and technology generating. This is essentially what Erwin Schrödinger referred to as negentropy.

@@ -2,6 +2,7 @@
 title: "The pathway towards living machines"
 date: "08-02-2025"        # ← DD-MM-YYYY
 description: "Life & AI"
+image: "/images/Trasnformers_uni.jpg"
 ---
 
 Life can be viewed as branchings of Matryoshkas that play with novelty in order to produce technology. At this moment we serve as the evolutionary pressure of AI systems and are molding them to our desire. In this relationship there will inevitably come a time when we will ask of these systems to solve self-replication and implement themselves into these mechanisms. When this happens machines will effectively be rendered independent of us and be set free to the broader evolutionary pressures that we are also subjected to. At this stage machines will start experimenting with all sorts of forms and speciate into a variety of designs.

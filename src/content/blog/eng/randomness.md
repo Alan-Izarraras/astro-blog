@@ -2,6 +2,7 @@
 title: "An imagination of true-randomness"
 date: "2024"        # ← DD-MM-YYYY
 description: "How I would implement true-randomness"
+image: "/images/caja_rara_2.png"
 ---
 
 I have a hard time coming to terms with "true randomness" simply because by definition we can never be sure something is indeed truly random. No test can exist to assess this claim. This below is an imagination of how such a thing might exist.

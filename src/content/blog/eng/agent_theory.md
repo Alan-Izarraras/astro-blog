@@ -1,7 +1,8 @@
 ---
 title: "A minimal model of experience and agents"
 date: "03-09-2024"        # ← DD-MM-YYYY
-description: "My theory of experience and agents"
+description: "Reality is made out of experience and a first agent able to observe this experience. When an agent observes, it is essentially differentiating a slice of experience, which results in new objects. Objects are themselves agents but are simultaneously something new to be experienced."
+image: "/images/yisus.png"
 ---
 
 <h2 style="text-align: center;">Overview</h2>

@@ -2,6 +2,7 @@
 title: "Intuitions for a New Evolutionary Theory"
 date: "12-05-2026"        # ← DD-MM-YYYY
 description: "Darwin is old. We need something new."
+image: "/images/build.jpeg"
 ---
 
 There are two possible explanations for the problem of the origin of life. The first is the view that the biomolecules and nucleic acids were the product of a stochastic coincidence of ideal physico-chemical conditions, which then produced interactions that eventually gave rise to the first cells. The second and more interesting explanation is that biomolecules and the first nucleic acids were subject to a process of selection — that they were actually the result of iterative evolution by which their forms and functions were progressively refined until they found the probabilistic configurations necessary to begin implementing life as we know it.

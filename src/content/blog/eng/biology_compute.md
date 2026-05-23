@@ -2,6 +2,7 @@
 title: "Does biology compute? Specialization and adaptability in biology"
 date: "20-06-2025"        # ← DD-MM-YYYY
 description: "Exploring the intersection between biology and computing"
+image: "/images/angry_math.png"
 ---
  
 Adapting to an environment is a non-linear process in a search for the best solutions to survival. There are these periods of droughts in evolutionary progress followed by changes that really make a difference and explode the adaptive capacity of biological systems. A prime example of this was the merging of ancient Eukaryotic cells with ancient Prokaryotic cells forming a novel cell type that contains what we now know as mitochondrias (the power house of the cell!). This great conjunction represented a stark increment in adaptability. Why? Primarily because it broke down the task of survival into two smaller components that each party could specialize on. One component was about being robust to outside perturbation and providing safety (ancient eukaryote), while the other component was the ability to harness energy from the medium (ancient procaryote). Of course each individual cell (pre-merger) could more so do these two task independently; but by conjugating they found that specializing and delegating tasks was a far superior strategy. This way each cell could optimize for their particular job which means that each sub process could be made much more efficiently and thus provide a surplus of energy and resources.

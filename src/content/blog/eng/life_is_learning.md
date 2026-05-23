@@ -2,6 +2,7 @@
 title: "Evolution is a learning algorithm"
 date: "21-09-2024"        # ← DD-MM-YYYY
 description: "life finds a way"
+image: "/images/Creatures!_wallpaper.png"
 ---
 
 "The goal is to persist in time"
