@@ -5,7 +5,6 @@ const tagline = "Scientist • Writer • Creative";
 import { getCollection } from 'astro:content';
 const allPosts = await getCollection('blog');
 
-// Sort by date (newest first)
 const sortedPosts = allPosts.sort((a, b) => 
   new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
@@ -17,116 +16,231 @@ const sortedPosts = allPosts.sort((a, b) =>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{pageTitle}</title>
   
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
   <style>
+    :root {
+      --bg: #F5EFE6;
+      --card:rgb(248, 248, 244);
+      --accent: #6D94C5;
+      --light: #CBDCEB;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: #2c2c2c;
+      line-height: 1.7;
+    }
+
+    /* ==================== COMPACT NAVIGATION ==================== */
+    nav {
+      padding: 1.2rem 0 1.8rem 0;
+      text-align: center;
+    }
+
+    .nav-menu {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.4rem;
+      font-size: 1.05rem;
+      color: #555;
+    }
+
+    .nav-link {
+      color: #555;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+    }
+
+    .separator {
+      color: #bbb;
+      font-size: 1.1rem;
+    }
+
+    /* ==================== HEADER ==================== */
+    header {
+      background: white;
+      padding: 5rem 1rem 4rem;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(235, 223, 48, 0.31);
+    }
+
+    .header-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .title-group h1 {
+      font-size: 3.6rem;
+      color: #2c2c2c;
+    }
+
+    .tagline {
+      font-size: 1.6rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+
+    .logo {
+      width: 180px;
+      opacity: 0.75;
+      transition: opacity 0.3s;
+    }
+
+    .logo:hover { opacity: 1; }
+
+    /* ==================== MAIN ==================== */
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      color: var(--accent);
+      text-align: center;
+      margin: 3.5rem 0 2rem 0;
+    }
+
+    .section {
+      background: var(--card);
+      padding: 4rem 2rem;
+      border-radius: 20px;
+      margin-bottom: 3rem;
+      text-align: center;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+      min-height: 220px;
+    }
+
+    /* Blog Accordion */
     .blog-list {
       max-width: 800px;
-      margin: 2rem auto;
+      margin: 0 auto;
     }
 
     .post-item {
-      margin-bottom: 0.8rem;
-      border-bottom: 1px solid #dddddd;
-      padding-bottom: 0.8rem;
+      margin-bottom: 1.2rem;
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
     }
 
     .post-item summary {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 600;
+      padding: 1.4rem 1.8rem;
       cursor: pointer;
-      padding: 0.5rem 0;
       list-style: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      user-select: none;
-    }
-
-    .post-item summary:hover {
-      color: #ccad00;
     }
 
     .post-item .arrow {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       transition: transform 0.4s ease;
-      transform-origin: center;
     }
 
     .post-item[open] .arrow {
       transform: rotate(90deg);
+      color:rgb(190, 85, 85);
     }
 
     .description-link {
-      display: block;
-      color: #ccad00;
+      color: var(--accent);
       text-decoration: none;
-      line-height: 1.6;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
     }
 
     .description-link:hover {
       text-decoration: underline;
-      color: #0055aa;
+      color: rgb(190, 85, 85);
     }
 
-    .post-item .post-content {
-      padding: 0 0 1.5rem 0;
-    }
-    
-    .post-image {
-      width: 100%;
-      max-height: 320px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 0.5rem;
-    }
-
-    .read-more {
-      display: inline-block;
-      margin-top: 0.5rem;
-      color: #0066cc;
-      font-weight: 500;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    @media (max-width: 768px) {
+      .header-content { gap: 2rem; }
+      .logo { width: 150px; }
+      h1 { font-size: 3rem; }
+      .nav-menu { gap: 1rem; font-size: 1rem; }
     }
   </style>
-
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <div class="title-group">
-      <h1>{pageTitle}</h1>
-      <p class="tagline">{tagline}</p>
+    <div class="header-content">
+      <div class="title-group">
+        <h1>{pageTitle}</h1>
+        <p class="tagline">{tagline}</p>
+      </div>
+      <img src="/images/logo_colorful.png" alt="A. Izarraras" class="logo" />
     </div>
-    <img src="/images/logo_colorful.png" alt="A. Izarraras" class="logo" />
   </header>
 
-  <main>
-    <h2>Blog Posts</h2>
+  <!-- Compact Navigation -->
+  <nav>
+    <div class="nav-menu">
+      <a href="#about" class="nav-link">About Me</a>
+      <span class="separator">|</span>
+      <a href="#blog" class="nav-link">Blog</a>
+      <span class="separator">|</span>
+      <a href="#art" class="nav-link">Art</a>
+      <span class="separator">|</span>
+      <a href="#academic" class="nav-link">Academic</a>
+    </div>
+  </nav>
 
+  <main>
+    <!-- About Me -->
+    <h2 id="about">About Me</h2>
+    <div class="section">
+      <p>Content coming soon...</p>
+    </div>
+
+    <!-- Blog Posts -->
+    <h2 id="blog">Meaning of life </h2>
     <div class="blog-list">
       {sortedPosts.map(post => (
         <details class="post-item">
           <summary>
-            <span class="title">{post.data.title}</span>
+            <span>{post.data.title}</span>
             <span class="arrow">›</span>
-          </summary
-        
+          </summary>
           <div class="post-content">
-            {post.data.image && (
-              <img src={post.data.image} alt={post.data.title} class="post-image" />
-            )}
+            {post.data.image && <img src={post.data.image} alt={post.data.title} class="post-image" />}
             <a href={`/blog/${post.id}`} class="description-link">
               {post.data.description}
             </a>
           </div>
         </details>
       ))}
+    </div>
+
+    <!-- Art -->
+    <h2 id="art">Art</h2>
+    <div class="section">
+      <p>Content coming soon...</p>
+    </div>
+
+    <!-- Academic -->
+    <h2 id="academic">Academic</h2>
+    <div class="section">
+      <p>Content coming soon...</p>
     </div>
   </main>
 </body>
