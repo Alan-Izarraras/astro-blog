@@ -1,7 +1,7 @@
 ---
 title: "The curious gene"
 date: "01-10-2024"        # ← DD-MM-YYYY
-description: "Life as a learning algorithm"
+description: "In the selfish gene, Richard Dawkins describes genetic material as possesing a hard coded motivation for survival. This is not only wrong but overlooks an important property; that life is technology generating which I describe as a universal learning algorithm. "
 image: "/images/Wanderer.jpeg"
 ---
 

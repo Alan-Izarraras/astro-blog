@@ -1,7 +1,7 @@
 ---
 title: "The pathway towards living machines"
 date: "08-02-2025"        # ← DD-MM-YYYY
-description: "Life & AI"
+description: "Life can be viewed as branchings of Matryoshkas that play with novelty in order to produce technology. At this moment we serve as the evolutionary pressure of AI systems and are molding them to our desires. In 20XX AI systems will solve the technical details of being sel-implemented in Earth and introduce themselves as independent life forms."
 image: "/images/Trasnformers_uni.jpg"
 ---
 

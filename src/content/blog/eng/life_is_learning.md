@@ -1,13 +1,13 @@
 ---
 title: "Evolution is a learning algorithm"
 date: "21-09-2024"        # ← DD-MM-YYYY
-description: "life finds a way"
+description: "If we are a result of life, which is actually an evolutionary algorithm to make sense of reality, how far does this process go? Where is life taking us?"
 image: "/images/Creatures!_wallpaper.png"
 ---
 
 "The goal is to persist in time"
 				
-What is the objective of life and natural selection? In the selfish gene, Dawkins introduces a straightforward understanding of the outcomes of evolution and natural selection. He argues that these are selfish and purely motivated by  being represented in the next generation. This is a brilliant remark because by all measurements this seems to be exactly the case. Alternative forms of DNA molecules arise by mutation and recombination and these then duke it out in the realm of life to achieve time supremacy, to see who can persist the longest and take over the world.
+What is the objective of life and natural selection? In the selfish gene, Dawkins introduces a straightforward understanding of the outcomes of evolution and natural selection. He argues that these are selfish and purely motivated by being represented in the next generation. This is a brilliant remark because by all measurements this seems to be exactly the case. Alternative forms of DNA molecules arise by mutation and recombination and these then duke it out in the realm of life to achieve time supremacy, to see who can persist the longest and take over the world.
 
 "Evolution is a measurement performed by the genome on the environment"
 

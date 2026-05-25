@@ -1,0 +1,12 @@
+To do list 
+
+1) Diseño del home
+
+- Agregar foto a seccion de "sobre mi"
+- logo a la derecha del nombre
+- agregar personajes. 
+- agregar introduccion a cada post.
+
+- agregar pagina de arte
+
+- Contener los posts en una caja donde para scrollear 

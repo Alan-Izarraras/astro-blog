@@ -1,7 +1,7 @@
 ---
 title: "Intuitions for a New Evolutionary Theory"
 date: "12-05-2026"        # ← DD-MM-YYYY
-description: "Darwin is old. We need something new."
+description: "When abiogenesis is brushed off as a huge probabilistic coincidence we discard the more interesting possibility that selection not only acts on living things with a genome, but rather that it is a prevalent universal force that drives systems towards complexity. "
 image: "/images/build.jpeg"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Does biology compute? Specialization and adaptability in biology"
 date: "20-06-2025"        # ← DD-MM-YYYY
-description: "Exploring the intersection between biology and computing"
+description: " Here I dicuss how evolution might be exploiting a kind of computation that differs from Turing machines. Understanding how biology computes or finds new functions is critical to establishing how evolution achieves adaptation."
 image: "/images/angry_math.png"
 ---
  

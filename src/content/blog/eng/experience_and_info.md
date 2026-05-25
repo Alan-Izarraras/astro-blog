@@ -1,7 +1,7 @@
 ---
 title: "Experience and information"
 date: "2024"        # ← DD-MM-YYYY
-description: "What does it mean to know?"
+description: "We try to put into logic what can only be grasped through experience. If it is the case that we live in an eternal substrate of consciousness, then language is the wrong framework and instead sense ought to be derived from qualia."
 image: "/images/blue_dreams.png"
 ---
 
