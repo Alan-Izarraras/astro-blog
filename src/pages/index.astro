@@ -8,6 +8,16 @@ const allPosts = await getCollection('blog');
 const sortedPosts = allPosts.sort((a, b) => 
   new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
+
+const imageFiles = import.meta.glob('/public/images/original/*.{png,jpg,jpeg,webp}', { eager: true });
+
+const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
+  const filename = path.split('/').pop().replace(/\.[^/.]+$/, ''); // strips extension
+  const title = filename.replace(/_/g, ' ');                       // underscores → spaces
+  const url = path.replace('/public', '');                         // remove /public prefix
+
+  return { title, url };
+});
 ---
 
 <html lang="es">
@@ -162,8 +172,25 @@ const sortedPosts = allPosts.sort((a, b) =>
 
     /* Blog Accordion */
     .blog-list {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
+      max-height: calc(5 * 130px);  /* rough height for 5 collapsed posts */
+      overflow-y: auto;
+      padding-right: 0.5rem;
+    }
+
+    .blog-list::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .blog-list::-webkit-scrollbar-track {
+      background: var(--card);
+      border-radius: 8px;
+    }
+
+    .blog-list::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 8px;
     }
 
     .post-item {
@@ -222,6 +249,69 @@ const sortedPosts = allPosts.sort((a, b) =>
       h1 { font-size: 3rem; }
       .nav-menu { gap: 1rem; font-size: 1rem; }
     }
+
+    .art-gallery {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+     gap: 1.5rem;
+     max-width: 1200px;
+     margin: 2rem auto;
+     /* These are the only new lines */
+     max-height: 600px;
+     overflow-y: auto;
+     padding-right: 0.5rem;   /* prevents cards from being clipped by scrollbar */
+   }
+
+    .art-gallery::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .art-gallery::-webkit-scrollbar-track {
+      background: var(--card);
+      border-radius: 8px;
+    }
+
+    .art-gallery::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 8px;
+    }
+
+    .art-card {
+      flex: 0 0 280px;        /* fixed width, won't shrink */
+      scroll-snap-align: start;
+    }
+
+    .art-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .art-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .art-card:hover img {
+      transform: scale(1.04);
+    }   
+
+    .art-info {
+      padding: 1rem 1.2rem;
+      text-align: center;
+    }
+
+    .art-info h3 {
+      margin: 0 0 0.3rem 0;
+      font-size: 1.1rem;
+    } 
+
+    .art-info p {
+      margin: 0;
+      font-size: 0.95rem;
+      opacity: 0.75;
+    }
+
   </style>
 </head>
 <body>
@@ -284,8 +374,17 @@ const sortedPosts = allPosts.sort((a, b) =>
 
     <!-- Art -->
     <h2 id="art">Art</h2>
-    <div class="section">
-      <p>Content coming soon...</p>
+    <div class="art-gallery">
+      {artPieces.map(piece => (
+        <div class="art-card">
+          <a href={piece.url} data-lightbox="artwork">
+            <img src={piece.url} alt={piece.title} loading="lazy" />
+          </a>
+          <div class="art-info">
+            <h3>{piece.title}</h3>
+          </div>
+        </div>
+      ))}
     </div>
 
     <!-- Academic -->
