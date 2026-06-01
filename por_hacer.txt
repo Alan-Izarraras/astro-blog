@@ -5,8 +5,8 @@ To do list
 - Agregar foto a seccion de "sobre mi"
 - logo a la derecha del nombre
 - agregar personajes. 
-- agregar introduccion a cada post.
+- agregar enlaces de contact (x, correo)
+- agregar tiempo de lectura y fecha a cada blogpost. 
+- agregar link de wikipedia a Universal Darwinism
+- agregar link de lectura al clickear las imagenes de los blogs. 
 
-- agregar pagina de arte
-
-- Contener los posts en una caja donde para scrollear 
