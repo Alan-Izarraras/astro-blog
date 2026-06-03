@@ -28,6 +28,7 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
   
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
+
   <style>
     :root {
       --bg: #F5EFE6;
@@ -41,9 +42,9 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
     html[data-theme="dark"] {
       --bg: #1f1c18;
       --card: #2c2822;
-      --accent: rgba(89, 193, 203, 0.75);
-      --text: rgba(251, 200, 17, 0.58);
-      --light:rgb(232, 165, 98);
+      --accent: rgba(231, 214, 63, 0.75);
+      --text: rgba(248, 222, 217, 0.89);
+      --light:rgba(251, 210, 62, 0.48);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -111,10 +112,10 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
 
     /* ==================== HEADER ==================== */
     header {
-      background: white;
+      background: --bg ;
       padding: 5rem 1rem 4rem;
       text-align: center;
-      box-shadow: 0 6px 20px rgba(251, 200, 17, 0.39);
+      box-shadow: 0 6px 20px --bg;
     }
 
     .header-content {
@@ -161,6 +162,7 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
     }
 
     .section {
+      border: 4px solid var(--light);
       background: var(--card);
       padding: 4rem 2rem;
       border-radius: 20px;
@@ -168,6 +170,32 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
       text-align: center;
       box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
       min-height: 220px;
+    }
+
+    .creatures-btn {
+      background: none;
+      border: none;
+      font-size: 1.05rem;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--text);
+      transition: color 0.3s ease;
+    }
+
+    .creatures-btn:hover {
+      color: var(--accent);
+    }
+
+    .draggable {
+      position: fixed;
+      width: 60px;
+      cursor: grab;
+      user-select: none;
+      z-index: 999;
+    } 
+
+    .draggable:active {
+      cursor: grabbing;
     }
 
     /* Blog Accordion */
@@ -337,6 +365,10 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
         <a href="#art" class="nav-link">Art</a>
         <span class="separator">|</span>
         <a href="#academic" class="nav-link">Academic</a>
+        <span class="separator">|</span>
+        <a href="#contact" class="nav-link">Contact</a>
+        <span class="separator">|</span>
+        <button class="nav-link creatures-btn" id="creatures-btn">Creatures</button>
       </div>
 
       <!-- Dark / Light Toggle -->
@@ -400,6 +432,27 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
       <div style="height: 50px;"></div>
       <p>Sohail, Mashaal, Alan Izarraras-Gomez, and Diego Ortega-Del Vecchyo. 2021. “Populations, Traits, and Their Spatial Structure in Humans.” Genome Biology and Evolution 13 (12): evab272. <a href="https://academic.oup.com/gbe/article/13/12/evab272/6459645"> https://doi.org/10.1093/gbe/evab272 </a></p>
     </div>
+
+    <!-- Contact -->
+    <h2 id="contact">Contact</h2>
+    <div class="section">
+      <p>Get in touch</p>
+      <div style="height: 20px;"></div
+      <div class="contact-links">
+        <a href="https://x.com/TeoriaNeutral" target="_blank" class="contact-btn">
+          𝕏 TeoriaNeutral
+        </a>
+        <div style="height: 20px;"></div>
+        <a href="https://x.com/AlanIzarraras" target="_blank" class="contact-btn">
+          𝕏 AlanIzarraras
+        </a>
+        <div style="height: 20px;"></div>
+        <a href="mailto:alanizarraras3@gmail.com" class="contact-btn">
+          ✉️ alanizarraras3@gmail.com
+        </a>
+      </div>
+    </div>
+
   </main>
 
   <!-- Photo Modal -->
@@ -429,6 +482,80 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
         localStorage.setItem('theme', 'dark');
       }
     });
+
+    const creatureImages = [
+      '/images/stickers/black_cat.png',
+      '/images/stickers/Hasbulla.png',
+      '/images/stickers/Eisntein.png',
+      '/images/stickers/enojon.png',
+      '/images/stickers/enojon_izq.png',
+      '/images/stickers/explorador.png',
+      '/images/stickers/j_grinberg.png',
+      '/images/stickers/lex.png',
+      '/images/stickers/mago_elevado.png',
+      '/images/stickers/pajaro_lector.png',
+      '/images/stickers/pico_2.png',
+      '/images/stickers/pico_3.png',
+      '/images/stickers/sableye.png',
+      '/images/stickers/sableye_right.png',
+      '/images/stickers/Terence.png',
+      '/images/stickers/thinking_infinity_dan.png',
+      '/images/stickers/asistente.png',
+      '/images/stickers/cruz_color_transparencia.png',
+      '/images/stickers/cyborg_espiritual.png',
+      '/images/stickers/creaturas_transparencia.png',
+      '/images/stickers/nekomata.png',
+      '/images/stickers/Rumi.png',
+      '/images/stickers/for_preferred_human.png',
+
+    ];
+
+    document.getElementById('creatures-btn').addEventListener('click', () => {
+      const src = creatureImages[Math.floor(Math.random() * creatureImages.length)];
+
+      const img = document.createElement('img');
+      img.src = src;
+      img.classList.add('draggable');
+
+      // Force fixed positioning inline so CSS can't override it
+      img.style.position = 'fixed';
+      img.style.width = '120px';
+      img.style.top  = `${window.innerHeight / 2 + (Math.random() - 0.5) * 200}px`;
+      img.style.left = `${window.innerWidth  / 2 + (Math.random() - 0.5) * 200}px`;
+
+      document.body.appendChild(img);
+      makeDraggable(img);
+    });
+
+    function makeDraggable(el) {
+      let offsetX = 0, offsetY = 0, isDragging = false;
+
+      el.addEventListener('mousedown', e => {
+        e.preventDefault();
+        isDragging = true;
+        offsetX = e.clientX - el.getBoundingClientRect().left;
+        offsetY = e.clientY - el.getBoundingClientRect().top;
+        el.style.zIndex = 1000;
+        el.style.cursor = 'grabbing';
+      });
+
+      el.addEventListener('dblclick', () => el.remove());
+
+      // Attach move/up to the ELEMENT's own listeners, not document
+      const onMove = e => {
+        if (!isDragging) return;
+        el.style.left = `${e.clientX - offsetX}px`;
+        el.style.top  = `${e.clientY - offsetY}px`;
+      };
+
+      const onUp = () => {
+        isDragging = false;
+        el.style.cursor = 'grab';
+      };
+
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup', onUp);
+    } 
 
     // Photo Modal
     const modalTrigger = document.getElementById('my-photo-trigger');
