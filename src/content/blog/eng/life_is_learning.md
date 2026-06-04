@@ -1,6 +1,6 @@
 ---
 title: "Evolution is a learning algorithm"
-date: 2024-09-21       # ← DD-MM-YYYY
+date: "2024-09-21"       # ← DD-MM-YYYY
 description: "If we are a result of life, which is actually an evolutionary algorithm to make sense of reality, how far does this process go? Where is life taking us?"
 image: "/images/Creatures!_wallpaper.png"
 ---

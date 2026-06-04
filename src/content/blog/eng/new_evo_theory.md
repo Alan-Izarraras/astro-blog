@@ -1,6 +1,6 @@
 ---
 title: "Intuitions for a New Evolutionary Theory"
-date: 2026-05-12        # ← DD-MM-YYYY
+date: "2026-05-12"        # ← DD-MM-YYYY
 description: "When abiogenesis is brushed off as a huge probabilistic coincidence we discard the more interesting possibility that selection not only acts on living things with a genome, but rather that it is a prevalent universal force that drives systems towards complexity. "
 image: "/images/build.jpeg"
 ---
