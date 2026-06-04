@@ -1,6 +1,6 @@
 ---
 title: "A minimal model of experience and agents"
-date: "03-09-2024"        # ← DD-MM-YYYY
+date: 2024-09-03      # ← DD-MM-YYYY
 description: "Reality is made out of experience and a first agent able to observe this experience. When an agent observes, it is essentially differentiating a slice of experience, which results in new objects. Objects are themselves agents but are simultaneously something new to be experienced."
 image: "/images/yisus.png"
 ---

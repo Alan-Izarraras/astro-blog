@@ -57,6 +57,15 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
       transition: background 0.4s ease, color 0.4s ease;
     }
 
+    a {
+      color: var(--accent);
+    }
+
+    a:hover {
+      color: var(--text);
+    }
+
+
     /* ==================== NAVIGATION ==================== */
     nav {
       padding: 1.2rem 0 1.8rem 0;
@@ -89,6 +98,8 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
     .nav-link:hover {
       color: var(--accent);
     }
+
+    
 
     .separator {
       color: #bbb;
@@ -396,7 +407,9 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
         <details class="post-item">
           <summary>
             <span>{post.data.title}</span>
-            <span class="arrow">›</span>
+            <span style="display: flex; align-items: center; gap: 1rem;">
+              <span style="font-size: 0.9rem; opacity: 0.6;">{new Date(post.data.date).getFullYear()}</span>
+              <span class="arrow">›</span>
           </summary>
           <div class="post-content">
             {post.data.image && <img src={post.data.image} alt={post.data.title} class="post-image" />}
@@ -436,7 +449,7 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
     <!-- Contact -->
     <h2 id="contact">Contact</h2>
     <div class="section">
-      <p>Get in touch</p>
+      <p></p>
       <div style="height: 20px;"></div
       <div class="contact-links">
         <a href="https://x.com/TeoriaNeutral" target="_blank" class="contact-btn">

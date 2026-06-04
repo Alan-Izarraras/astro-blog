@@ -1,6 +1,6 @@
 ---
 title: "The agentic interpretation of biological fitness"
-date: "23-04-2025"        # ← DD-MM-YYYY
+date: 2025-04-23        # ← DD-MM-YYYY
 description: "A learning-centric view of evolution requieres us to reframe the concept of natural selection. Anchoring selection on learning enables us to construct better descriptions and predictions of what evoluton enables."
 image: "/images/the_fitness_hierarchy.png"
 ---

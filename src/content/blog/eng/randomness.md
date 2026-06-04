@@ -1,6 +1,6 @@
 ---
 title: "An imagination of true-randomness"
-date: "2024"        # ← DD-MM-YYYY
+date: 2024        # ← DD-MM-YYYY
 description: "This is how I would implement true-randomness had I access to writting the laws of the universe."
 image: "/images/caja_rara_2.png"
 ---
