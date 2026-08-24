@@ -166,10 +166,48 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
     }
 
     h2 {
-      font-size: 2.4rem;
+      font-size: 1.44rem;
       color: var(--accent);
       text-align: center;
-      margin: 3.5rem 0 2rem 0;
+      margin: 1rem 0;
+    }
+
+    .main-section {
+      margin-bottom: 2rem;
+    }
+
+    .main-section summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.6rem;
+      user-select: none;
+      outline: none;
+    }
+
+    .main-section summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .main-section summary h2 {
+      margin: 0.8rem 0;
+      transition: color 0.3s ease;
+    }
+
+    .main-section summary:hover h2 {
+      color: var(--text);
+    }
+
+    .main-section summary .section-arrow {
+      font-size: 1.32rem;
+      color: var(--accent);
+      transition: transform 0.3s ease;
+    }
+
+    .main-section[open] summary .section-arrow {
+      transform: rotate(90deg);
     }
 
     .section {
@@ -211,15 +249,15 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
 
     /* Blog Accordion */
     .blog-list {
-      max-width: 1000px;
+      max-width: 660px;
       margin: 0 auto;
-      max-height: calc(5 * 130px);  /* rough height for 5 collapsed posts */
+      max-height: calc(5 * 65px);  /* rough height for 5 collapsed posts */
       overflow-y: auto;
       padding-right: 0.5rem;
     }
 
     .blog-list::-webkit-scrollbar {
-      width: 8px;
+      width: 6px;
     }
 
     .blog-list::-webkit-scrollbar-track {
@@ -233,26 +271,61 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
     }
 
     .post-item {
-      margin-bottom: 1.2rem;
+      margin-bottom: 0.6rem;
       background: var(--card);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+      border-radius: 10px;
+      overflow: visible;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
     }
 
     .post-item summary {
-      font-size: 1.3rem;
+      position: relative;
+      font-size: 0.94rem;
       font-weight: 600;
-      padding: 1.4rem 1.8rem;
+      padding: 0.7rem 1rem;
       cursor: pointer;
       list-style: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 0.8rem;
+    }
+
+    .hover-preview-tooltip {
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%) scale(0.9);
+      margin-right: 0.5rem;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 20;
+      width: 75px;
+      height: 45px;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--accent);
+      transition: opacity 0.25s ease 0s, transform 0.25s ease 0s, visibility 0.25s ease 0s;
+    }
+
+    .post-item:hover .hover-preview-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-50%) scale(1);
+      transition: opacity 0.3s ease 0.6s, transform 0.3s ease 0.6s, visibility 0.3s ease 0.6s;
+    }
+
+    .hover-preview-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .post-item .arrow {
-      font-size: 1.9rem;
+      font-size: 1.2rem;
       transition: transform 0.4s ease;
     }
 
@@ -261,21 +334,13 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
     }
 
     .post-content {
-      padding: 0 1.8rem 2rem 1.8rem;
-    }
-
-    .post-image {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 1.2rem;
+      padding: 0.4rem 1rem 1rem 1rem;
     }
 
     .description-link {
       color: var(--accent);
       text-decoration: none;
-      font-size: 1.08rem;
+      font-size: 0.9rem;
     }
 
     .description-link:hover {
@@ -391,80 +456,108 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
 
   <main>
     <!-- About Me -->
-    <h2 id="about">About Me</h2>
-    <div class="section">
-      <p>Hi, I'm <a href="#" id="my-photo-trigger" style="color: var(--accent); text-decoration: none; font-weight: 600;">Alan</a>. I currently do research in the field of computational population genetics. Evolution and defining life in the broadest sense are my biggest obsessions. My blog focuses on developing new evolutionary theory by taking seriously an idea sometimes reffered to as <a href="https://en.wikipedia.org/wiki/Universal_Darwinism" target="_blank">Universal Darwinism </a>.</p>
-      <div style="height: 30px;"></div>
-      <p>I consider myself a mystic; I am constantly trying to reconcile broader ordering paradigms with current descriptions of reality in search for more robust and explicative models. It turns out this a rare profile to have in academic science which is why I need an outlet like this to share less othordox ideas. </p>
-      <div style="height: 30px;"></div>
-      <p>I despise complexity and think hard to make things simple. My philosophy is that all things are determined and that the words "random" and "complex" are not informative descriptions of systems but rather words that are used when encountering knowledge gaps.</p>
-    </div>
+    <details class="main-section">
+      <summary id="about">
+        <h2>About Me</h2>
+        <span class="section-arrow">›</span>
+      </summary>
+      <div class="section">
+        <p>Hi, I'm <a href="#" id="my-photo-trigger" style="color: var(--accent); text-decoration: none; font-weight: 600;">Alan</a>. I currently do research in the field of computational population genetics. Evolution and defining life in the broadest sense are my biggest obsessions. My blog focuses on developing new evolutionary theory by taking seriously an idea sometimes reffered to as <a href="https://en.wikipedia.org/wiki/Universal_Darwinism" target="_blank">Universal Darwinism </a>.</p>
+        <div style="height: 30px;"></div>
+        <p>I consider myself a mystic; I am constantly trying to reconcile broader ordering paradigms with current descriptions of reality in search for more robust and explicative models. It turns out this a rare profile to have in academic science which is why I need an outlet like this to share less othordox ideas. </p>
+        <div style="height: 30px;"></div>
+        <p>I despise complexity and think hard to make things simple. My philosophy is that all things are determined and that the words "random" and "complex" are not informative descriptions of systems but rather words that are used when encountering knowledge gaps.</p>
+      </div>
+    </details>
 
     <!-- Blog Posts -->
-    <h2 id="blog">Blog Posts</h2>
-    <div class="blog-list">
-      {sortedPosts.map(post => (
-        <details class="post-item">
-          <summary>
-            <span>{post.data.title}</span>
-            <span style="display: flex; align-items: center; gap: 1rem;">
-              <span style="font-size: 0.9rem; opacity: 0.6;">{new Date(post.data.date).getFullYear()}</span>
-              <span class="arrow">›</span>
-          </summary>
-          <div class="post-content">
-            {post.data.image && <img src={post.data.image} alt={post.data.title} class="post-image" />}
-            <a href={`/blog/${post.id}`} class="description-link">
-              {post.data.description}
-            </a>
-          </div>
-        </details>
-      ))}
-    </div>
+    <details class="main-section">
+      <summary id="blog">
+        <h2>Blog Posts</h2>
+        <span class="section-arrow">›</span>
+      </summary>
+      <div class="blog-list">
+        {sortedPosts.map(post => (
+          <details class="post-item">
+            <summary>
+              <span>{post.data.title}</span>
+              <span style="display: flex; align-items: center; gap: 0.5rem; position: relative;">
+                {post.data.image && (
+                  <div class="hover-preview-tooltip">
+                    <img src={post.data.image} alt={post.data.title} class="hover-preview-image" />
+                  </div>
+                )}
+                <span style="font-size: 0.8rem; opacity: 0.6;">{new Date(post.data.date).getFullYear()}</span>
+                <span class="arrow">›</span>
+              </span>
+            </summary>
+            <div class="post-content">
+              <a href={`/blog/${post.id}`} class="description-link">
+                {post.data.description}
+              </a>
+            </div>
+          </details>
+        ))}
+      </div>
+    </details>
 
     <!-- Art -->
-    <h2 id="art">Art</h2>
-    <div class="art-gallery">
-      {artPieces.map(piece => (
-        <div class="art-card">
-          <a href={piece.url} data-lightbox="artwork">
-            <img src={piece.url} alt={piece.title} loading="lazy" />
-          </a>
-          <div class="art-info">
-            <h3>{piece.title}</h3>
+    <details class="main-section">
+      <summary id="art">
+        <h2>Art</h2>
+        <span class="section-arrow">›</span>
+      </summary>
+      <div class="art-gallery">
+        {artPieces.map(piece => (
+          <div class="art-card">
+            <a href={piece.url} data-lightbox="artwork">
+              <img src={piece.url} alt={piece.title} loading="lazy" />
+            </a>
+            <div class="art-info">
+              <h3>{piece.title}</h3>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </details>
 
     <!-- Academic -->
-    <h2 id="academic">Academic</h2>
-    <div class="section">
-      <p>Izarraras-Gomez, Alan, and Diego Ortega-Del Vecchyo. 2023. “Ancient DNA Uncovers Past Migrations in California.” Nature 624 (7990): 43–44.  <a href="https://www.nature.com/articles/d41586-023-03503-7"> https://doi.org/10.1038/d41586-023-03503-7 </a></p>
-      <div style="height: 50px;"></div>
-      <p>Villa-Islas, Viridiana, Alan Izarraras-Gomez, Maximilian Larena, Elizabeth Mejía Perez Campos, Marcela Sandoval-Velasco, Juan Esteban Rodríguez-Rodríguez, Miriam Bravo-Lopez, et al. 2023. “Demographic History and Genetic Structure in Pre-Hispanic Central Mexico.” Science 380 (6645): eadd6142. <a href="https://www.science.org/doi/10.1126/science.add6142"> DOI: 10.1126/science.add614 </a></p>
-      <div style="height: 50px;"></div>
-      <p>Sohail, Mashaal, Alan Izarraras-Gomez, and Diego Ortega-Del Vecchyo. 2021. “Populations, Traits, and Their Spatial Structure in Humans.” Genome Biology and Evolution 13 (12): evab272. <a href="https://academic.oup.com/gbe/article/13/12/evab272/6459645"> https://doi.org/10.1093/gbe/evab272 </a></p>
-    </div>
+    <details class="main-section">
+      <summary id="academic">
+        <h2>Academic</h2>
+        <span class="section-arrow">›</span>
+      </summary>
+      <div class="section">
+        <p>Izarraras-Gomez, Alan, and Diego Ortega-Del Vecchyo. 2023. “Ancient DNA Uncovers Past Migrations in California.” Nature 624 (7990): 43–44.  <a href="https://www.nature.com/articles/d41586-023-03503-7"> https://doi.org/10.1038/d41586-023-03503-7 </a></p>
+        <div style="height: 50px;"></div>
+        <p>Villa-Islas, Viridiana, Alan Izarraras-Gomez, Maximilian Larena, Elizabeth Mejía Perez Campos, Marcela Sandoval-Velasco, Juan Esteban Rodríguez-Rodríguez, Miriam Bravo-Lopez, et al. 2023. “Demographic History and Genetic Structure in Pre-Hispanic Central Mexico.” Science 380 (6645): eadd6142. <a href="https://www.science.org/doi/10.1126/science.add6142"> DOI: 10.1126/science.add614 </a></p>
+        <div style="height: 50px;"></div>
+        <p>Sohail, Mashaal, Alan Izarraras-Gomez, and Diego Ortega-Del Vecchyo. 2021. “Populations, Traits, and Their Spatial Structure in Humans.” Genome Biology and Evolution 13 (12): evab272. <a href="https://academic.oup.com/gbe/article/13/12/evab272/6459645"> https://doi.org/10.1093/gbe/evab272 </a></p>
+      </div>
+    </details>
 
     <!-- Contact -->
-    <h2 id="contact">Contact</h2>
-    <div class="section">
-      <p></p>
-      <div style="height: 20px;"></div
-      <div class="contact-links">
-        <a href="https://x.com/TeoriaNeutral" target="_blank" class="contact-btn">
-          𝕏 TeoriaNeutral
-        </a>
-        <div style="height: 20px;"></div>
-        <a href="https://x.com/AlanIzarraras" target="_blank" class="contact-btn">
-          𝕏 AlanIzarraras
-        </a>
-        <div style="height: 20px;"></div>
-        <a href="mailto:alanizarraras3@gmail.com" class="contact-btn">
-          ✉️ alanizarraras3@gmail.com
-        </a>
+    <details class="main-section">
+      <summary id="contact">
+        <h2>Contact</h2>
+        <span class="section-arrow">›</span>
+      </summary>
+      <div class="section">
+        <div class="contact-links">
+          <a href="https://x.com/TeoriaNeutral" target="_blank" class="contact-btn">
+            𝕏 TeoriaNeutral
+          </a>
+          <div style="height: 20px;"></div>
+          <a href="https://x.com/AlanIzarraras" target="_blank" class="contact-btn">
+            𝕏 AlanIzarraras
+          </a>
+          <div style="height: 20px;"></div>
+          <a href="mailto:alanizarraras3@gmail.com" class="contact-btn">
+            ✉️ alanizarraras3@gmail.com
+          </a>
+        </div>
       </div>
-    </div>
+    </details>
 
   </main>
 
@@ -474,6 +567,20 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
   </div>
 
   <script>
+    // Auto-open main section accordions on nav link click
+    document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSummary = document.getElementById(targetId);
+        if (targetSummary) {
+          const parentDetails = targetSummary.closest('details');
+          if (parentDetails) {
+            parentDetails.open = true;
+          }
+        }
+      });
+    });
+
     const toggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
 
@@ -533,8 +640,13 @@ const artPieces = Object.entries(imageFiles).map(([path, mod]) => {
       // Force fixed positioning inline so CSS can't override it
       img.style.position = 'fixed';
       img.style.width = '120px';
-      img.style.top  = `${window.innerHeight / 2 + (Math.random() - 0.5) * 200}px`;
-      img.style.left = `${window.innerWidth  / 2 + (Math.random() - 0.5) * 200}px`;
+      
+      const padding = 20;
+      const maxLeft = Math.max(padding, window.innerWidth - 140);
+      const maxTop = Math.max(padding, window.innerHeight - 140);
+
+      img.style.left = `${padding + Math.random() * (maxLeft - padding)}px`;
+      img.style.top  = `${padding + Math.random() * (maxTop - padding)}px`;
 
       document.body.appendChild(img);
       makeDraggable(img);
